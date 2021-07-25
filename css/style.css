@@ -1,0 +1,116 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+}
+html {
+    height: 100%;
+}
+body {
+    height: 100vh;
+    margin: 0;
+}
+body:before {
+	content:"";
+	position:fixed;
+	left:0;
+	top:0;
+	right:0;
+	bottom:0;
+	z-index:-1;
+	background: linear-gradient(to bottom right, #e66465, #9198e5);
+}
+.content{
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 10px;
+}
+.text-center{
+    text-align: center;
+}
+.titulo-principal{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 35px;
+}
+.estagio1 form{
+    width: 100%;
+    display: inline-flex;
+}
+.input-texto{
+    width: 75%;
+    height: 60px;
+    background-color: #ffffff1f;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    font-size: 20px;
+    padding: 10px;
+    display: inline-block;
+    box-sizing: border-box;
+    outline: none;
+}
+.input-texto::placeholder{
+    color: #ffffff;
+    opacity: 1;
+}
+.input-texto:-ms-input-placeholder {
+    color: #ffffff;
+}
+  
+.input-texto::-ms-input-placeholder {
+    color: #ffffff;
+}
+.input-enviar{
+    width: 22%;
+    display: inline-block;
+    box-sizing: border-box;
+    margin-left: auto;
+    height: 60px;
+    background-color: #ffffff;
+    border: 0;
+    color: #b383b1;
+    font-size: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+#lista{
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    margin: 45px 0;
+}
+#lista li{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    background-color: #ffffff14;
+}
+#lista li p{
+    width: 80%;
+    margin: 0;
+}
+.tarefa-check{
+    margin-right: auto;
+    cursor: pointer;
+}
+.remover-tarefa{
+    margin-left: auto;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+.remover-tarefa img{
+    width: 20px;
+}
+#lista li.ok{
+    background-color: #7979792b;
+    opacity: 0.5;
+}
+#lista li.ok p{
+    text-decoration: line-through;
+}
