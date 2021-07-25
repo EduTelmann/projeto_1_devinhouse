@@ -2,8 +2,8 @@ var LISTA = document.getElementById('lista');
 var BTNADD = document.getElementById('addtarefa');
 var INPUTADD = document.getElementById('input-tarefa');
 var FORM = document.getElementById('formulario-tarefa');
-INPUTADD.focus();
 
+INPUTADD.focus();
 FORM.addEventListener('submit',adicionar);
 
 function adicionar(event){
@@ -46,6 +46,8 @@ function salvarLocal(){
             LISTACOMPLETA.push({'tarefa_content': LISTA.querySelectorAll("li")[i].getElementsByTagName("p")[0].innerHTML, 'tarefa_ok': LISTA.querySelectorAll("li")[i].getElementsByTagName("input")[0].checked });
         }
         localStorage.setItem("LISTACOMPLETADETAREFAS", JSON.stringify(LISTACOMPLETA));
+    }else{
+        localStorage.removeItem("LISTACOMPLETADETAREFAS");
     }
 }
 
@@ -67,3 +69,4 @@ function carregarLocal(){
 }
 
 carregarLocal();
+
